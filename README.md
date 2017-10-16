@@ -28,9 +28,9 @@ It looks like:
     }
     
 # How to use:
-1.You can copy the method above.
-2.Use .dll in library folder.
-3.Download the project and add in to your project.
+1.You can copy the method above.</br>
+2.Use .dll in library folder.</br>
+3.Download the project and add in to your project.</br>
 
 # Example
 You can open project in example folder.</br>
