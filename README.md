@@ -34,7 +34,10 @@ It looks like:
 
 # Example
 You can open project in example folder.</br>
-It's a simple pid demo. Just set kp, ki, kd, dt, setpoint, and click set button.
+It's a simple pid demo. 
+I use a lowpass filter which I write before to simulate a system.(https://github.com/jeremy7710/LowpassFilter)</br>
+Just set kp, ki, kd, dt, setpoint, and click set button.
+And image will be plotted.
 
 
 # Reference:
