@@ -1,0 +1,5 @@
+c:\users\changenzo\documents\visual studio 2015\Projects\Simple_PID\Simple_PID\bin\Debug\Simple_PID.dll
+c:\users\changenzo\documents\visual studio 2015\Projects\Simple_PID\Simple_PID\bin\Debug\Simple_PID.pdb
+c:\users\changenzo\documents\visual studio 2015\Projects\Simple_PID\Simple_PID\obj\Debug\UtilityPID.csprojResolveAssemblyReference.cache
+c:\users\changenzo\documents\visual studio 2015\Projects\Simple_PID\Simple_PID\obj\Debug\Simple_PID.dll
+c:\users\changenzo\documents\visual studio 2015\Projects\Simple_PID\Simple_PID\obj\Debug\Simple_PID.pdb
