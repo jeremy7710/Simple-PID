@@ -19,7 +19,7 @@ It looks like:
         err = SetPoint - measured_value;
         integral += err * dt;
         derivative = (err - pre_err) / dt;
-        output = (Kp * err + Ki * integral + Kd * derivative);// * 0.3;
+        output = (Kp * err + Ki * integral + Kd * derivative);
 
 
         pre_err = err;
