@@ -1,4 +1,3 @@
-
 class PID:
 
     def __init__(self, Kp = 0.5, Ki = 0.5, Kd = 0.1, SetPoint = 1, dt = 0.1):
@@ -50,13 +49,12 @@ class PID:
 
 # all you need is set the kp, ki, kd, it's really simple.
 # you can set your setpoint and sample time too.
-pid = PID(0.7, 6, 0.01, SetPoint=1, dt = 0.1)
+pid = PID(1, 10, 0.001, SetPoint=1, dt = 0.1)
 
-
-y_list = []
-x = 0
-
-for i in range(30):
+y_list=[]
+y_list.append(0)
+x=0
+for i in range(29):
     
     # throw your feadback signal to pid
     x=pid.compute(x)
@@ -66,12 +64,16 @@ for i in range(30):
     
     # make a list to draw picture
     y_list.append(x)
+	
 
-
-
+# draw picture
 import matplotlib.pyplot as plt
+from scipy.interpolate import spline
 
-plt.plot(range(30),y_list)
+x_list = range(30)
+x_arr = np.array(x_list)
+x_smooth = np.linspace(x_arr.min(), x_arr.max(), 300)
+y_list = spline(x_list, y_list, x_smooth)
+plt.plot(x_smooth,y_list)
 
 pid.clear()
-
