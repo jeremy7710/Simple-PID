@@ -51,7 +51,7 @@ And what it looks like in Python:
 In C#:</br></br>
 1.You can copy the method above.</br>
 2.Use .dll in library folder.</br>
-3.Download the project and add in to your project.</br>
+3.Download the project and add in to your project.</br></br>
 
 In Python:</br></br>
 0.Download the file Simple_PID_Python/PID_Demo.py, and see how to use.</br>
@@ -59,13 +59,13 @@ In Python:</br></br>
 2.import PID</br>
 3.Set kp,ki,kd</br>
     
-    pid = PID(1, 10, 0.001, SetPoint=1, dt = 0.1)</br>
+    pid = PID(1, 10, 0.001, SetPoint=1, dt = 0.1)
 4.Use it.</br>
     
-    output = pid.compute(feedback_signal)</br>
+    output = pid.compute(feedback_signal)
 5.If you want to start at 0</br>
     
-    pid.clear()</br>
+    pid.clear()
 
 # Example
 In C#:</br></br>
@@ -73,7 +73,7 @@ You can open project in example folder.</br>
 It's a simple pid demo. 
 I use a lowpass filter which I write before to simulate a system.(https://github.com/jeremy7710/LowpassFilter)</br>
 Just set kp, ki, kd, dt, setpoint, and click set button.
-And image will be plotted.
+And image will be plotted.</br></br>
 
 
 In Python:</br></br>
