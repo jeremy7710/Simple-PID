@@ -1,5 +1,5 @@
 # Simple-PID
-It's a simple PID simulator in C#.</br>
+It's a simple PID simulator in C# and Python.</br>
 
 You can set kp, ki, kd, setpoint, dt, and the function will return a value.</br></br>
 
@@ -8,7 +8,7 @@ The pid formula should be: </br></br>
 ![image](https://wikimedia.org/api/rest_v1/media/math/render/svg/242b6798586d4fc1aedf7e4f92bf77416e4fc76c)
 
 </br></br>
-It looks like:
+What it looks like in C#:
 
     double Kp = 0.5, Ki = 0.5, Kd = 0.1, SetPoint = 10, dt = 0.1, integral, pre_err;
 
@@ -26,19 +26,58 @@ It looks like:
 
         return output;
     }
-    
+
+And what it looks like in Python:
+
+    def compute(self, feedback_value = None):
+
+        err, output, derivative = 0, 0, 0
+        
+        if(feedback_value is not None):
+            self.feedback_value = feedback_value
+            
+        err = self.SetPoint - self.feedback_value
+        self.integral += err * self.dt
+        derivative = (err - self.pre_err) / self.dt
+        output = (self.Kp * err + self.Ki * self.integral + self.Kd * derivative)
+
+
+        self.pre_err = err
+        self.feedback_value = output
+
+        return output
+        
 # How to use:
+In C#:
 1.You can copy the method above.</br>
 2.Use .dll in library folder.</br>
 3.Download the project and add in to your project.</br>
 
+In Python:
+0.Download the file Simple_PID_Python/PID_Demo.py, and see how to use.
+1.Download the file Simple_PID_Python/PID.py
+2.import PID
+3.Set kp,ki,kd
+    pid = PID(1, 10, 0.001, SetPoint=1, dt = 0.1)
+4.Use it.
+    output = pid.compute(feedback_signal)
+5.If you want to start at 0
+    pid.clear()
+
 # Example
+In C#:
 You can open project in example folder.</br>
 It's a simple pid demo. 
 I use a lowpass filter which I write before to simulate a system.(https://github.com/jeremy7710/LowpassFilter)</br>
 Just set kp, ki, kd, dt, setpoint, and click set button.
 And image will be plotted.
 
+
+In Python:
+1.You just run the code at Simple_PID_Python/PID_Demo.py, and you will see a beautiful output.
+
+cd YourPath
+python PID_Demo.py
 
 # Reference:
 https://en.wikipedia.org/wiki/PID_controller
