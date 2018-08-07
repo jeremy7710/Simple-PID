@@ -1,5 +1,5 @@
 # Simple-PID
-It's a simple PID simulator.</br>
+It's a simple PID simulator in C#.</br>
 
 You can set kp, ki, kd, setpoint, dt, and the function will return a value.</br></br>
 
