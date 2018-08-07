@@ -68,6 +68,7 @@ for i in range(29):
 
 # draw picture
 import matplotlib.pyplot as plt
+import numpy as np
 from scipy.interpolate import spline
 
 x_list = range(30)
@@ -75,5 +76,6 @@ x_arr = np.array(x_list)
 x_smooth = np.linspace(x_arr.min(), x_arr.max(), 300)
 y_list = spline(x_list, y_list, x_smooth)
 plt.plot(x_smooth,y_list)
+plt.show()
 
 pid.clear()
